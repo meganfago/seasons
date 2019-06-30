@@ -22,7 +22,7 @@ class App extends Component {
         )
     }
 
-    render() {
+    returnContent=()=>{
         if(this.state.errorMessage && !this.state.latitude){
             return <div>Error: {this.state.errorMessage}</div>;
         }
@@ -31,7 +31,15 @@ class App extends Component {
            return <SeasonDisplay latitude={this.state.latitude}/>
         }
 
-        return <Spinner/> ;
+        return <Spinner message="Please Accept Location Request"/> ;
+    }
+
+    render() {
+        return (
+            <div>
+                {this.returnContent()}
+            </div>
+        )
     }
 }
 
