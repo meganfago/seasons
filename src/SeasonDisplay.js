@@ -4,7 +4,7 @@ class SeasonDisplay extends Component {
     render(){
         return (
             <div>
-                <h2> SZN DIZPLAY </h2>
+                <h2> Latitude: {this.props.latitude}</h2>
             </div>
         )
     }
