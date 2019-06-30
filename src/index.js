@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay'
+import Spinner from './Spinner'
 
 
 class App extends Component {
@@ -30,7 +31,7 @@ class App extends Component {
            return <SeasonDisplay latitude={this.state.latitude}/>
         }
 
-        return <div>Loading...</div>;
+        return <Spinner/> ;
     }
 }
 
